@@ -97,7 +97,7 @@ static const uint8_t u8g_dev_uc1701_mini12864_HAL_init_seq[] PROGMEM = {
   UC1701_POWER_CONTROL(0x7),  // all power control circuits on
   UC1701_BOOST_RATIO(0x0),    // set booster ratio to 4x
   UC1701_V5_RATIO(3),         // set V0 voltage resistor ratio to large
-  UC1701_CONTRAST(0x27),      // set contrast
+  UC1701_CONTRAST(0xDC),      // set contrast // mnul - was 0x27 - now 220 decimal to be able to see something on Fysetc 12864 mini V2.1
   UC1701_INDICATOR(0),        // indicator disable
   UC1701_ON(1),               // display on
 
