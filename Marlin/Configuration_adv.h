@@ -1559,7 +1559,7 @@
 
   // A smaller font may be used on the Info Screen. Costs 2434 bytes of PROGMEM.
   // Western only. Not available for Cyrillic, Kana, Turkish, Greek, or Chinese.
-  #define USE_SMALL_INFOFONT // mnul
+  //#define USE_SMALL_INFOFONT // mnul - don't do it, not nice.
 
   // Swap the CW/CCW indicators in the graphics overlay
   //#define OVERLAY_GFX_REVERSE
