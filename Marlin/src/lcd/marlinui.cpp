@@ -91,6 +91,17 @@ constexpr uint8_t epps = ENCODER_PULSES_PER_STEP;
   }
 #endif
 
+#if HAS_LCD_BRIGHTNESS
+  uint8_t MarlinUI::brightness = DEFAULT_LCD_BRIGHTNESS;
+  bool MarlinUI::backlight = true;
+
+  void MarlinUI::set_brightness(const uint8_t value) {
+    backlight = !!value;
+    if (backlight) brightness = constrain(value, MIN_LCD_BRIGHTNESS, MAX_LCD_BRIGHTNESS);
+    // Set brightness on enabled LCD here
+  }
+#endif
+
 #if ENABLED(SOUND_MENU_ITEM)
   bool MarlinUI::buzzer_enabled = true;
 #endif
@@ -705,7 +716,7 @@ constexpr uint8_t epps = ENCODER_PULSES_PER_STEP;
      *     This is used to achieve more rapid stepping on kinematic machines.
      *
      * Currently used by the _lcd_move_xyz function in menu_motion.cpp
-     * and the ubl_map_move_to_xy funtion in menu_ubl.cpp.
+     * and the ubl_map_move_to_xy function in menu_ubl.cpp.
      */
     void ManualMove::task() {
 
