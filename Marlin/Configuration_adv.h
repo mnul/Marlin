@@ -1611,10 +1611,10 @@
   #define BOOT_MARLIN_LOGO_ANIMATED // mnul - Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
   // Frivolous Game Options
-  #define MARLIN_BRICKOUT  // mnul
-  #define MARLIN_INVADERS  // mnul
-  #define MARLIN_SNAKE  // mnul
-  #define GAMES_EASTER_EGG          // Add extra blank lines above the "Games" sub-menu
+  // #define MARLIN_BRICKOUT  // mnul
+  // #define MARLIN_INVADERS  // mnul
+  // #define MARLIN_SNAKE  // mnul
+  // #define GAMES_EASTER_EGG          // Add extra blank lines above the "Games" sub-menu
 
 #endif // HAS_MARLINUI_U8GLIB
 
