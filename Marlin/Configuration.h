@@ -1859,8 +1859,8 @@
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "TPU"  // mnul
-#define PREHEAT_3_TEMP_HOTEND 240
-#define PREHEAT_3_TEMP_BED    50
+#define PREHEAT_3_TEMP_HOTEND 235
+#define PREHEAT_3_TEMP_BED    55
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
