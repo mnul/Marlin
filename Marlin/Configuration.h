@@ -96,7 +96,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_3  // mnul
 #endif
 
 /**
@@ -1334,14 +1334,14 @@
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-//#define Z_MIN_PROBE_REPEATABILITY_TEST
+#define Z_MIN_PROBE_REPEATABILITY_TEST  // mnul
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
@@ -2996,13 +2996,13 @@
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED // mnul
 #if ENABLED(NEOPIXEL_LED)
-  #define NEOPIXEL_TYPE   NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
+  #define NEOPIXEL_TYPE     NEO_RGB //NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
   //#define NEOPIXEL_PIN     4     // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-  //#define NEOPIXEL_PIXELS 30       // mnul - Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
+  #define NEOPIXEL_PIXELS 3       // mnul - Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
   //#define NEOPIXEL_IS_SEQUENTIAL   // mnul - Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
-  //#define NEOPIXEL_BRIGHTNESS 127  // mnul - Initial brightness (0-255)
+  #define NEOPIXEL_BRIGHTNESS 255  // mnul - Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST  // mnul - Cycle through colors at startup
 
   // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
@@ -3034,7 +3034,7 @@
  *  - Turn off after the print has finished and the user has pushed a button
  */
 #if ANY(BLINKM, RGB_LED, RGBW_LED, PCA9632, PCA9533, NEOPIXEL_LED)
-  #define PRINTER_EVENT_LEDS
+  //#define PRINTER_EVENT_LEDS
 #endif
 
 /**
