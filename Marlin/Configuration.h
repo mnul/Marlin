@@ -1456,7 +1456,7 @@
 #define Y_BED_SIZE 220  // mnul
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -14  // mnul
+#define X_MIN_POS -13  // mnul
 #define Y_MIN_POS -1  //mnul
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -1762,13 +1762,13 @@
 #define LEVEL_BED_CORNERS  // mnul
 
 #if ENABLED(LEVEL_BED_CORNERS)
-  #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+  #define LEVEL_CORNERS_INSET_LFRB { 30, 10, 10, 10 } // mnul - (mm) Left, Front, Right, Back insets
   #define LEVEL_CORNERS_HEIGHT      0.0   // (mm) Z height of nozzle at leveling points
   #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
   //#define LEVEL_CENTER_TOO                // Move to the center after the last corner
   #define LEVEL_CORNERS_USE_PROBE  // mnul
   #if ENABLED(LEVEL_CORNERS_USE_PROBE)
-    #define LEVEL_CORNERS_PROBE_TOLERANCE 0.05 // mnul - default: 0.1
+    #define LEVEL_CORNERS_PROBE_TOLERANCE 0.08 // mnul - default: 0.1
     #define LEVEL_CORNERS_VERIFY_RAISED   // After adjustment triggers the probe, re-probe to verify
     //#define LEVEL_CORNERS_AUDIO_FEEDBACK
   #endif
